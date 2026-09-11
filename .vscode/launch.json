@@ -1,0 +1,45 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python Debugger: Current File",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Ejecutar estadistica",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "mi_proyecto.estadistica",
+            "cwd": "${workspaceFolder}/mi_proyecto",
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}/mi_proyecto/src"
+            },
+            "python": "${workspaceFolder}/mi_proyecto/.venv/bin/python"
+        },
+        {
+            "name": "Ejecutar main",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "mi_proyecto.main",
+            "cwd": "${workspaceFolder}/mi_proyecto",
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}/mi_proyecto/src"
+            },
+            "python": "${workspaceFolder}/mi_proyecto/.venv/bin/python"
+        },
+        {
+            "name": "Ejecutar python_test",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "python_test.main",
+            "cwd": "${workspaceFolder}/mi_proyecto",
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}/mi_proyecto/src"
+            },
+            "python": "${workspaceFolder}/mi_proyecto/.venv/bin/python"
+        }
+    ]
+}
