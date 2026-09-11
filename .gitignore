@@ -1,0 +1,8 @@
+.DS_Store
+.venv.zip
+BaseTest/pyproject.toml
+.gitignore
+.gitignore
+BaseTest/uv.lock
+DuckDBTest/pyproject.toml
+DuckDBTest/uv.lock
