@@ -1,7 +1,0 @@
-{
-  "python.defaultInterpreterPath": "${workspaceFolder}/mi_proyecto/.venv/bin/python",
-  "python.envFile": "${workspaceFolder}/mi_proyecto/.venv",
-  "python.analysis.extraPaths": [
-    "${workspaceFolder}/mi_proyecto/src"
-  ]
-}
