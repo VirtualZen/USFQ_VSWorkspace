@@ -9,6 +9,8 @@ wheels/
 # Virtual environments
 .venv
 
+#Finder
 .DS_Store
-.venv.zip
-mlflow.db
+
+# Generated data (see generar_ventas.py docstring)
+ventas.csv

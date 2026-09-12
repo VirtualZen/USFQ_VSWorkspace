@@ -9,6 +9,8 @@ wheels/
 # Virtual environments
 .venv
 
+# Ruff
+.ruff_cache
+
+#Finder
 .DS_Store
-.venv.zip
-mlflow.db
