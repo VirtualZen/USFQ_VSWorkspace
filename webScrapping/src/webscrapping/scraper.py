@@ -1,7 +1,7 @@
 import time
 
-import pandas as pd
-import requests
+import pandas as pd  # type: ignore[import-unresolved]
+import requests  # type: ignore[import-unresolved]
 from bs4 import BeautifulSoup  # type: ignore[import-unresolved]
 
 BASE = "https://books.toscrape.com/"
