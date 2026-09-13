@@ -1,7 +1,0 @@
-id_modelo,nombre,familia
-1,regresion_logistica,lineal
-2,random_forest,arboles
-3,xgboost,arboles
-4,mlp_pequena,redes
-5,mlp_grande,redes
-6,svm_rbf,kernel
