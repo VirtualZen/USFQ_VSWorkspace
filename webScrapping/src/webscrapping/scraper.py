@@ -16,15 +16,16 @@ for pagina in range(1, 51):
         "precio": libro.select_one("p.price_color").text,
         "rating": " ".join(libro.select_one("p.star-rating")["class"])
         })
-        print("\t",datos[-1]["titulo"], datos[-1]["precio"], datos[-1]["rating"])
-    print(f"Página {pagina}/50")
+        print("\t",datos[-1]["titulo"], datos[-1]["precio"], datos[-1]["rating"], flush=True)
+    print(f"Página {pagina}/50", flush=True)
     time.sleep(0.5)
-print("Scraping completed. Part 1 no category added. Wait ...")
+print("Scraping completed. Part 1 no category added. Wait ...", flush=True)
 def mapa_de_categorias(): # te la damos hecha
     sopa = BeautifulSoup(requests.get(BASE).text, "html.parser")
     mapa = {}
     for a in sopa.select("div.side_categories ul ul li a"):
         nombre, url = a.text.strip(), BASE + a["href"]
+        print(f"\tCategoría: {nombre}", flush=True)
         while url:
             s = BeautifulSoup(requests.get(url).text, "html.parser")
             for libro in s.select("article.product_pod"):
@@ -34,10 +35,10 @@ def mapa_de_categorias(): # te la damos hecha
             time.sleep(0.5)
     return mapa
 
-print("Mapping categories...")
+print("Mapping categories...", flush=True)
 libros = pd.DataFrame(datos)
 libros["categoria"] = libros["titulo"].map(mapa_de_categorias())
-print("Categories mapped.")
+print("Categories mapped.", flush=True)
 print()
 print(len(libros), "libros")
 print(libros["categoria"].isna().sum(), "sin categoría")
